@@ -1,4 +1,3 @@
-package calculadora;
 
 public class Quadrado implements FormaGeometrica {
     private int lado;

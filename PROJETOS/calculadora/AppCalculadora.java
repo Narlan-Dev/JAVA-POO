@@ -1,6 +1,4 @@
-package calculadora;
-
-public class App {
+public class AppCalculadora {
     public static void main(String[] args) {
         Circulo c1=new Circulo(4);
         Quadrado q1=new Quadrado(2);
