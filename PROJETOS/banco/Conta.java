@@ -4,7 +4,7 @@ public class Conta {
     
     public Conta(String numero){
         this.numero=numero;
-        this.saldo=0;
+        this.saldo=100;
     }
     public String getNumero(){
         return numero;
