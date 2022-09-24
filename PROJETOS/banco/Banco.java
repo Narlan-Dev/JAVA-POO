@@ -1,14 +1,19 @@
-public class Banco {
+public class Banco implements Juros {
+    private final int MAX = 3;
     private Conta[] contas;
-    private Poupança [] poupanças=new Poupança[3];
-    private int prox;
+    private Poupança [] poupanças=new Poupança[MAX];
+    private int prox = 0;
     private double rendimento;
 
-    /*public Banco(int tam){
-        //Cliente[] clientes = new Cliente[tam];
-    }*/
-    public void add(Poupança p){
-        this.poupanças[prox++]=p;
+    public boolean add(Poupança p){
+        if(prox < MAX){
+            this.poupanças[prox++]=p;
+            if((MAX-prox)==0){
+            System.out.println("\n\nNumero maximo de contas atingido!!");    
+            return false;   
+            }else{return true;}
+        }
+        return false;
     }
     public void depositar(String numero, double valor){
         for(int i=0; i<prox; i++){
@@ -27,7 +32,7 @@ public class Banco {
         for(int c=0; c<prox; c++){
             if(poupanças[c].getNumero().equals(numero)){
                 System.out.format("\n\nConta: %s", poupanças[c].getNumero());
-                System.out.format("\n\nSaldo: %f", poupanças[c].getSaldo());
+                System.out.format("\nSaldo: %f", poupanças[c].getSaldo());
             }
         }
     }
