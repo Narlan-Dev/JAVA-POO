@@ -1,4 +1,4 @@
-package lista2Questao20;
+package lista3Questao20;
 
 public class Cadastro {
     private final int NUMMAX = 1000;

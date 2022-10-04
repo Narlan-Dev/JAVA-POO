@@ -16,7 +16,9 @@ public class Cliente{
     public String getNome(){
         return this.nome;
     }
-    public void equals(String name){
-        if(name.equals(this.nome))System.out.println("Clientes iguais");
+    @Override public boolean equals(Object cliente){
+        if(this.name == ((Cliente) cliente).getNome()){
+            return true;
+        }else{return false;}
     }*/
 }
