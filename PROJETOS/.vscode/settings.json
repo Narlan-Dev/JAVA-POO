@@ -1,11 +1,12 @@
 {
     "java.project.sourcePaths": [
         "src",
-        "lista2Questao5",
         "game",
+        "container",
         "calculadora",
         "banco",
-        "atividades"
+        "atividades",
+        "programas"
     ],
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
