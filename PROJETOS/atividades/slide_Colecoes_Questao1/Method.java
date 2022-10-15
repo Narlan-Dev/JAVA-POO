@@ -7,9 +7,10 @@ public abstract class Method {
     private static Map<String, Integer> dictionary = new HashMap<>();
 
     public static void occurrencesWordRating(Phrase phrase){
+        dictionary.clear();
         String[] words = phrase.getPhrase().split("\\s+");
         for(int i = 0; i < words.length; i++){
-            dictionary.put(words[i], null); 
+            dictionary.put(words[i], null);
         }
         for(String key : dictionary.keySet()){
             for(int i = 0; i < words.length; i++){
@@ -24,6 +25,6 @@ public abstract class Method {
             for(String key : dictionary.keySet()){
                 System.out.format("\nWord: %7s        Occurrences: %d", key, dictionary.get(key));
             }
-        }else{System.out.println("Undefined mapping!!");}
+        }else{System.out.println("Undefined phrase!!");}
     }
 }
