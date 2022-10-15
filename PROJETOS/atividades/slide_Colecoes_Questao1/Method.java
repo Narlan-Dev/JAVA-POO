@@ -3,7 +3,7 @@ import java.util.Map;
 import java.util.HashMap;
 
 public abstract class Method {
-    private static int value = 0;
+    private static int value;
     private static Map<String, Integer> dictionary = new HashMap<>();
 
     public static void occurrencesWordRating(Phrase phrase){
