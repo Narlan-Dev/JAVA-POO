@@ -5,6 +5,6 @@ public class Phrase {
 
     public String getPhrase(){return word;}
     public Phrase(String word){
-        this.word = word;
+        this.word = Method.removeAccents(word).toLowerCase();
     }
 }

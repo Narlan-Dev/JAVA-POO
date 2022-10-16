@@ -1,11 +1,15 @@
 package slide_Colecoes_Questao1;
 import java.util.Map;
 import java.util.HashMap;
+import java.text.Normalizer;
 
 public abstract class Method {
     private static int value;
     private static Map<String, Integer> dictionary = new HashMap<>();
 
+    public static String removeAccents(String word){
+        return Normalizer.normalize(word, Normalizer.Form.NFD).replaceAll("[^\\p{ASCII}]|\\p{Punct}", "");
+    }
     public static void occurrencesWordRating(Phrase phrase){
         dictionary.clear();
         String[] words = phrase.getPhrase().split("\\s+");
