@@ -1,4 +1,4 @@
-package banco;
+package banco_slide_colecoes;
 
 public class Banco implements Juros {
     private final int MAX = 3;
@@ -28,6 +28,21 @@ public class Banco implements Juros {
         for(int c=0; c<prox; c++){
             this.rendimento=poupanças[c].getSaldo()*taxa;
             poupanças[c].setSaldo(this.rendimento);
+        }
+    }
+    public int pesquisa(String  numero){
+        for(int i=0; i<prox; i++){if(poupanças[i].getNumero().equals(numero)){return i;}}
+        return 0;
+    }
+    public void debitar(String numero, double valor) throws ContaNaoEncontradaException, SaldoException{
+        if(pesquisa(numero)==0){
+            throw new ContaNaoEncontradaException(numero);
+        }else{
+            if(poupanças[pesquisa(numero)].getSaldo() < valor){
+                throw new SaldoException(valor);
+            }else{
+                poupanças[pesquisa(numero)].debitar(valor);
+            }
         }
     }
     public void showMeDados(String numero){

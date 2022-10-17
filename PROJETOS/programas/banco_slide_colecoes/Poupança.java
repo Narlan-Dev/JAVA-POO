@@ -1,4 +1,4 @@
-package banco;
+package banco_slide_colecoes;
 
 public class Poupança extends Conta implements Juros{
     private double valor;
