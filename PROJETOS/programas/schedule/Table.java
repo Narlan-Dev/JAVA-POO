@@ -2,7 +2,6 @@ package schedule;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-import java.util.Vector;
 
 public class Table extends javax.swing.JFrame implements BackgroudColor{
     
@@ -37,7 +36,7 @@ public class Table extends javax.swing.JFrame implements BackgroudColor{
         jTable2 = new javax.swing.JTable();
         
         setUndecorated(true);
-        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -194,6 +193,7 @@ public class Table extends javax.swing.JFrame implements BackgroudColor{
         jLabel13.setText("*Phone");
 
         jTextField2.setBackground(new java.awt.Color(45, 118, 232));
+        jTextField2.setForeground(new Color(255, 255, 255));
         jTextField2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jTextField2.setBorder(null);
         jTextField2.setSelectedTextColor(new java.awt.Color(240, 240, 240));
@@ -208,6 +208,7 @@ public class Table extends javax.swing.JFrame implements BackgroudColor{
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
 
         jTextField3.setBackground(new java.awt.Color(45, 118, 232));
+        jTextField3.setForeground(new Color(255, 255, 255));
         jTextField3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jTextField3.setBorder(null);
         jTextField3.setSelectedTextColor(new java.awt.Color(240, 240, 240));
@@ -291,6 +292,7 @@ public class Table extends javax.swing.JFrame implements BackgroudColor{
         jScrollPane2.setToolTipText("");
 
         jTable2.setBackground(new java.awt.Color(45, 118, 232));
+        jTable2.setForeground(new Color(255, 255, 255));
         jTable2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -304,7 +306,7 @@ public class Table extends javax.swing.JFrame implements BackgroudColor{
             jTable2.getColumnModel().getColumn(1).setMinWidth(0);
             jTable2.getColumnModel().getColumn(1).setMaxWidth(0);
         }
-        jTable2.setGridColor(new java.awt.Color(255, 255, 255));
+        jTable2.setGridColor(new java.awt.Color(45, 188, 232));
         jTable2.setSelectionBackground(new java.awt.Color(45, 118, 232));
         jTable2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
@@ -358,6 +360,9 @@ public class Table extends javax.swing.JFrame implements BackgroudColor{
         resetColor(jLabel13);
         jTextArea1.setText("");
         jTextArea1.setForeground(new Color(255, 255, 255));
+        jTextField2.setText("");
+        jTextField3.setText("");
+        jTable2.clearSelection();
         this.dispose();
     }                                    
     private void jPanel5MouseEntered(java.awt.event.MouseEvent evt){                                     
@@ -477,7 +482,7 @@ public class Table extends javax.swing.JFrame implements BackgroudColor{
         resetColor(jLabel12);
     }
     private void jTextField3CaretUpdate(javax.swing.event.CaretEvent evt) {                                        
-        jLabel13.setText("*Name");
+        jLabel13.setText("*Phone");
         resetColor(jLabel13);
     }  
     public void addToTable(String name, String id){

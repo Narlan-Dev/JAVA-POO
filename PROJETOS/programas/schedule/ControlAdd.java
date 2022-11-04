@@ -86,6 +86,7 @@ public class ControlAdd extends javax.swing.JFrame implements BackgroudColor{
         jLabel13.setText("*Phone");
 
         jTextField2.setBackground(new java.awt.Color(45, 118, 232));
+        jTextField2.setForeground(new Color(255, 255, 255));
         jTextField2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jTextField2.setBorder(null);
         jTextField2.setSelectedTextColor(new java.awt.Color(240, 240, 240));
@@ -100,6 +101,7 @@ public class ControlAdd extends javax.swing.JFrame implements BackgroudColor{
         jSeparator2.setForeground(new java.awt.Color(255, 255, 255));
 
         jTextField3.setBackground(new java.awt.Color(45, 118, 232));
+        jTextField3.setForeground(new Color(255, 255, 255));
         jTextField3.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
         jTextField3.setBorder(null);
         jTextField3.setSelectedTextColor(new java.awt.Color(240, 240, 240));
@@ -197,7 +199,7 @@ public class ControlAdd extends javax.swing.JFrame implements BackgroudColor{
         resetColor(jLabel12);
     }
     private void jTextField3CaretUpdate(javax.swing.event.CaretEvent evt) {                                        
-        jLabel13.setText("*Name");
+        jLabel13.setText("*Phone");
         resetColor(jLabel13);
     }                     
     private void jPanel5MouseExited(java.awt.event.MouseEvent evt) {                                    
@@ -290,6 +292,6 @@ public class ControlAdd extends javax.swing.JFrame implements BackgroudColor{
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private int id = 1;
+    private static int id = 1;
     // End of variables declaration                   
 }
