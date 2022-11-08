@@ -292,6 +292,6 @@ public class ControlAdd extends javax.swing.JFrame implements BackgroudColor{
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
-    private static int id = 1;
+    private static int id = Registration.numberCustomers();
     // End of variables declaration                   
 }

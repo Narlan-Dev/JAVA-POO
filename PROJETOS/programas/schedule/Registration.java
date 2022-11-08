@@ -49,6 +49,13 @@ public abstract class Registration {
             throw new InvalidCustomer();
         }
     }
+    public static int numberCustomers(){
+        int counter = 1;
+        for(Client customer : clients.keySet()){
+            counter++;
+        }
+        return counter;
+    }
     public static void showTable(){
         table.show();
     }

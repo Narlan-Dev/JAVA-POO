@@ -1,11 +1,21 @@
 package schedule;
 import javax.swing.*;
 import java.awt.*;
+import java.io.IOException;
 
 public class Panel extends javax.swing.JFrame implements BackgroudColor {
 
     public Panel() {
         initComponents();
+        try {
+            FileRead.readAllFile();
+        } catch (NumberFormatException e) {
+            e.printStackTrace();
+        } catch (RequiredFieldExcecption e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }//criar instancia automática de clientes de acordo com os dados do arquivo;
     }   
 
     private void initComponents() {
@@ -23,7 +33,7 @@ public class Panel extends javax.swing.JFrame implements BackgroudColor {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
-        setUndecorated(true);
+        //setUndecorated(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));

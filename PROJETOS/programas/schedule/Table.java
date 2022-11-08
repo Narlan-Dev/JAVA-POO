@@ -35,7 +35,7 @@ public class Table extends javax.swing.JFrame implements BackgroudColor{
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
         
-        setUndecorated(true);
+        //setUndecorated(true);
         setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
