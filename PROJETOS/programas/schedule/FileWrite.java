@@ -9,9 +9,9 @@ public abstract class FileWrite {
         try{
             BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(new FileOutputStream("schedule/DAO.txt")));
             
-            bw.flush();
+            bw.flush(); //Libera o fluxo de gravação em buffer
             for(Client customer : copy.keySet()){
-                bw.write(customer.getName()+";"+customer.getPhone()+";"+customer.getDescription()+";"+customer.getId());
+                bw.write(customer.getName()+";"+customer.getPhone()+";"+customer.getDescription()+";"+customer.getId()+"\n");
             }
             bw.close();
         }catch(FileNotFoundException e){

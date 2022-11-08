@@ -7,6 +7,7 @@ public class Panel extends javax.swing.JFrame implements BackgroudColor {
 
     public Panel() {
         initComponents();
+        /*Abertura de arquivo ao incializar a agenda*/
         try {
             FileRead.readAllFile();
         } catch (NumberFormatException e) {
@@ -15,7 +16,7 @@ public class Panel extends javax.swing.JFrame implements BackgroudColor {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
-        }//criar instancia automática de clientes de acordo com os dados do arquivo;
+        }
     }   
 
     private void initComponents() {
@@ -33,7 +34,7 @@ public class Panel extends javax.swing.JFrame implements BackgroudColor {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
 
-        //setUndecorated(true);
+        setUndecorated(true);
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
@@ -221,6 +222,7 @@ public class Panel extends javax.swing.JFrame implements BackgroudColor {
         pack();
     }// </editor-fold>                        
     private void jLabel7MousePressed(java.awt.event.MouseEvent evt) {                                     
+        /*Chama updateDAO da class registration ao fechar a agenda*/
         try {
             Registration.updateDAO();
         } catch (IOException e) {

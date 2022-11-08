@@ -57,6 +57,9 @@ public abstract class Registration {
         }
         return counter;
     }
+    /*Chama o metodo "escrever todas linha do arquivo"
+     * Passando como parametro o Map "clients"
+    */
     public static void updateDAO() throws IOException{
         FileWrite.writeAllFile(clients);
     }
