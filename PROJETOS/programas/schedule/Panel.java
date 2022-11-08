@@ -221,6 +221,11 @@ public class Panel extends javax.swing.JFrame implements BackgroudColor {
         pack();
     }// </editor-fold>                        
     private void jLabel7MousePressed(java.awt.event.MouseEvent evt) {                                     
+        try {
+            Registration.updateDAO();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         System.exit(0);
     }                                    
     private void jPanel5MouseEntered(java.awt.event.MouseEvent evt) {                                     

@@ -1,4 +1,5 @@
 package schedule;
+import java.io.IOException;
 import java.util.*;
 
 public abstract class Registration {
@@ -55,6 +56,9 @@ public abstract class Registration {
             counter++;
         }
         return counter;
+    }
+    public static void updateDAO() throws IOException{
+        FileWrite.writeAllFile(clients);
     }
     public static void showTable(){
         table.show();
