@@ -10,7 +10,6 @@ public class AppLibraly {
         } catch (FullStackException e) {
             e.printStackTrace();
         }
-        
         System.out.println(libraly.retrieveLast().getTitle());
     }
 }
